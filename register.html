@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* 기본 스타일 설정 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* 네비게이션 스타일 */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #007BFF;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+/* 헤더 스타일 */
+h2 {
+    text-align: center;
+    color: #007BFF;
+}
+
+/* 메인 스타일 */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 폼 스타일 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Adjust width to fit padding and border */
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* 추가 스타일 */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+}
+
+form div label {
+    margin: 0 10px 0 0;
+    font-weight: normal;
+}
+
+input[type="text"].small-input {
+    width: auto;
+    display: inline-block;
+    margin: 0 5px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">
+            홈
+        </a>
+        <a href="introduce.html">
+            소개
+        </a>
+        <a href="projects.html">
+            프로젝트
+        </a>
+        <a href="contact.html">
+            연락처
+        </a>
+    </nav>
+    <h2>
+        회원가입
+    </h2>
+    <main>
+        <form action="/submit" method="get">
+            <label for="id">
+                ID   :
+            </label>
+            <input type="text" name="id" id="id"
+            placeholder="사용할 id를 입력해주세요" required>
+            <input type="button" value="중복확인">
+            <br>
+            <label for="password">
+                비밀번호:
+            </label>
+            <input type="password" name="password" id="password"
+            placeholder="사용할 비밀번호를 입력해주세요" required>
+            <br>
+            <label for="password1">
+                비밀번호 확인
+            </label>
+            <input type="password" name="password1" id="password1"
+            placeholder="비밀번호를 한번 더 입력하세요">
+            <br>
+            <label for="name">
+                이름
+            </label>
+            <input type="text" name="name" id="name"
+            placeholder="이름을 입력해주세요" pattern="^[가-힣]+$">
+            <br>
+            <label for="adress">
+                주소
+            </label>
+            <input type="button" value="우편번호">
+            <input type="text" name="adree1" id="adree1" min="5" size="6" pattern="\d*{3}">
+            <label for="adree1">
+            <br>
+            <input type="text" name="adree3" id="adree3" size="30" required>
+            <br>    
+            <input type="text" name="adree4" id="adree4" size="30" required placeholder="나머지 주소를 입력해주세요 ">
+    
+            <br>
+            <label for="phone">
+                휴대전화
+            </label>
+            <select name="" id="phone1" size="1" >
+                <option value="010" >
+                    010
+                </option>
+                <option value="011">
+                    011
+                </option>
+                <option value="016">
+                    016
+                </option>
+                <option value="017">
+                    017
+                </option>
+                <option value="018">
+                    018
+                </option>
+            </select>    
+            <input type="text" name="phone" id="phone"
+            placeholder="뒷자리 입력" pattern="\d*{7,8}">
+            <br>
+            <label for="phone">
+                전화번호
+            </label>
+            <select name="" id="phone1" size="1" >
+                <option value="02" >
+                    02
+                </option>
+                <option value="031">
+                    031
+                </option>
+                <option value="032">
+                    032
+                </option>
+                <option value="033">
+                    033
+                </option>
+                <option value="041">
+                    041
+                </option>
+                <option value="042">
+                    042
+                </option>
+                <option value="043">
+                    043
+                </option>
+                <option value="044">
+                    044
+                </option>
+                <option value="051">
+                    051
+                </option>
+                <option value="052">
+                    052
+                </option>
+                <option value="053">
+                    053
+                </option>
+                <option value="054">
+                    054
+                </option>
+                <option value="055">
+                    055
+                </option>
+                <option value="061">
+                    061
+                </option>
+                <option value="062">
+                    062
+                </option>
+                <option value="063">
+                    063
+                </option>
+                <option value="064">
+                    064
+                </option>
+            </select>    
+            <input type="text" name="phone1" id="phone"
+            placeholder="뒷자리 입력" pattern="\d*{7,8}">
+            <br>
+            <label for="birth">생년월일</label>
+            <input type="radio" name="sheep" id="sheep">
+            <label for="sheep">
+                양력
+            </label>
+            <input type="radio" name="sheep" id="sheep1">
+            <label for="sheep1">
+                음력
+            </label>
+            <br>
+            <input type="date" name="birth1" id="birth1">
+            <br>
+             <input type="submit" value="회원가입">
+             <input type="reset" value="초기화">
+        </form>
+    </main>
+</body>
+</html>
